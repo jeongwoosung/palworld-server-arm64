@@ -8,4 +8,5 @@
    docker compose up -d
    ```
 注意打开 8211(UDP)、25575端口
+
 配置文件位于 data/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
