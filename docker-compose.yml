@@ -1,9 +1,9 @@
 version: '3'
 services:
   steamcmd:
-    image: czy0612/palworld-server:test
+    image: czy0612/palworld-server:latest
     ports:
-      - "2111:8211/udp"
-      - "2111:8211"
+      - "8211:8211/udp"
+      - "25575:25575"
     volumes:
       - "./data:/home/steam/Steam/steamapps/common/PalServer"
