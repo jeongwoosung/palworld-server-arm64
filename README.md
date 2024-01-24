@@ -1,4 +1,4 @@
-# Palworld-server-arm64 docker 搭建幻兽帕鲁 arm 服务
+# Docker 搭建幻兽帕鲁 arm 服务
 
 ## 使用方法
 
