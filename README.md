@@ -6,6 +6,7 @@
 
    ```bash
    git clone https://github.com/zion-c/palworld-server-arm64.git
+   cd palworld-server-arm64
    docker compose up -d
    ```
 
