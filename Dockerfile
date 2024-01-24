@@ -87,5 +87,21 @@ WORKDIR /home/steam/Steam
 
 # Download and run SteamCMD
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
+USER root
 
-ENTRYPOINT FEXBash ./steamcmd.sh
+RUN apt install expect
+
+COPY ./initServer.sh /home/steam/Steam/initServer.sh
+COPY ./auto_install.exp /home/steam/Steam/auto_install.exp
+
+USER root
+RUN chmod +x /home/steam/Steam/initServer.sh
+RUN chmod +x /home/steam/Steam/auto_install.exp
+RUN mkdir -p /home/steam/Steam/steamapps/common/PalServer
+
+RUN chmod -R 777 /home/steam/Steam
+
+USER steam
+RUN mkdir -p ~/.steam/sdk64/
+
+ENTRYPOINT /home/steam/Steam/initServer.sh
