@@ -6,4 +6,4 @@ services:
       - "8211:8211/udp"
       - "25575:25575"
     volumes:
-      - "./data:/home/steam/Steam/steamapps/common/PalServer"
+      - "/home/ubuntu/smb/palworld-server:/home/steam/Steam/steamapps/common/PalServer"
